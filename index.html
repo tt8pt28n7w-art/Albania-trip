@@ -1,294 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Waar ik ben — Albanië, 21–27 september 2026</title>
 <!-- ============================================================
-     SQUARESPACE SETUP — READ THIS, THEN DELETE IT
+     GITHUB PAGES — BESTANDEN
      ------------------------------------------------------------
-     1. Squarespace: Pages → add a new blank page, e.g. /albania
-     2. Page settings → Password Protection → set a family password
-     3. Page settings → SEO → paste this meta line so it stays out of Google:
-        <meta name="robots" content="noindex,nofollow">
-     4. NEEDED: a Core/Plus/Advanced (or legacy Business) plan —
-        Code Blocks won't render script/iframes on Basic or Personal.
-     5. On the page, add a CODE BLOCK (not a text block).
-        Display mode must be set to HTML, not Markdown.
-     6. Paste EVERYTHING between the markers below, i.e. from the
-        <style> tag down to the closing </script> tag.
-        You do NOT need the <html>/<head>/<body> wrapper — Squarespace
-        supplies its own. So copy from "=== COPY FROM HERE ===" down to
-        "=== COPY TO HERE ===".
-     7. Save → Publish. Test on your phone with the password.
+     Zet dit bestand als index.html in je repo, samen met:
+       - CNAME      → één regel: albania.dijkhuizen.de
+       - .nojekyll  → volledig leeg bestand
+     Plaats dit NIET in een submap. Alles in de root.
      ============================================================ -->
 <style>
-  .al-wrap{
+  .nl-wrap{
     --ink:#1d2733; --muted:#6b7a8c; --paper:#f5f1e8; --card:#fff;
     --line:#e4ddd0; --pine:#2f5d50; --pine-light:#3f7d6b; --sky:#4a8db5;
     --amber:#c8892f; --plum:#7a4b6b;
     --shadow:0 2px 10px rgba(29,39,51,.07), 0 12px 30px rgba(29,39,51,.05);
-    max-width:820px;margin:0 auto;padding:0 4px 40px;
+    max-width:820px;margin:0 auto;padding:0 4px 48px;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;
+    color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;background:var(--paper);
   }
-  .al-wrap *{box-sizing:border-box;}
-  .al-hero{
+  .nl-wrap *{box-sizing:border-box;}
+  .nl-hero{
     background:radial-gradient(circle at 84% 8%, rgba(74,141,181,.4), transparent 55%),
                linear-gradient(160deg,#22493f 0%,#2f5d50 48%,#3d6d5b 100%);
-    color:#f5f1e8;border-radius:16px;padding:34px 26px 30px;position:relative;overflow:hidden;
-    box-shadow:var(--shadow);
+    color:#f5f1e8;border-radius:16px;padding:36px 28px 32px;position:relative;overflow:hidden;
+    box-shadow:var(--shadow);margin-top:18px;
   }
-  .al-kicker{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;opacity:.78;margin:0 0 9px;font-weight:600;}
-  .al-hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(25px,5vw,36px);margin:0 0 10px;line-height:1.12;letter-spacing:-.4px;}
-  .al-hero p{margin:0;font-size:15px;opacity:.92;max-width:560px;}
-  .al-updated{margin-top:16px;font-size:12.5px;opacity:.75;}
-  .al-sec{margin:32px 0 0;}
-  .al-sec h2{font-family:Georgia,serif;font-weight:400;font-size:21px;margin:0 0 4px;letter-spacing:-.2px;}
-  .al-sec .note{color:var(--muted);font-size:14px;margin:0 0 14px;}
-  .al-card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:18px 20px;}
-  /* status strip */
-  .al-status{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:20px;}
-  .al-stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:12px 14px;}
-  .al-stat .lbl{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;opacity:.7;font-weight:700;margin-bottom:5px;}
-  .al-stat .val{font-size:14.5px;font-weight:600;line-height:1.35;}
-  /* day cards */
-  .al-day{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);margin-bottom:12px;overflow:hidden;}
-  .al-day summary{
-    cursor:pointer;list-style:none;padding:15px 18px;display:flex;align-items:center;gap:14px;
-    background:linear-gradient(to right,#fbf9f4,#fff);font-weight:600;
-  }
-  .al-day summary::-webkit-details-marker{display:none;}
-  .al-day summary::after{content:"＋";margin-left:auto;color:var(--muted);font-size:15px;transition:.2s;}
-  .al-day[open] summary::after{content:"−";}
-  .al-day[open] summary{border-bottom:1px solid var(--line);}
-  .al-dnum{flex:0 0 auto;width:46px;height:46px;border-radius:11px;background:var(--pine);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;line-height:1;}
-  .al-dnum small{font-size:8.5px;letter-spacing:.1em;opacity:.78;margin-bottom:3px;}
-  .al-dnum span{font-size:19px;}
-  .al-dtitle{font-size:15.5px;}
-  .al-dsub{display:block;font-size:12.5px;color:var(--muted);font-weight:500;margin-top:3px;}
-  .al-body{padding:6px 18px 16px;}
-  .al-row{display:grid;grid-template-columns:82px 1fr;gap:13px;padding:11px 0;border-bottom:1px dashed var(--line);}
-  .al-row:last-child{border-bottom:none;}
-  .al-t{font-size:12.5px;font-weight:700;color:var(--pine);padding-top:2px;}
-  .al-c{font-size:14.5px;color:#3c4a5a;}
-  .al-c b{color:var(--ink);}
-  .al-badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:6px;margin-left:7px;vertical-align:middle;}
+  .nl-kicker{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;opacity:.78;margin:0 0 9px;font-weight:600;}
+  .nl-hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(25px,5vw,36px);margin:0 0 10px;line-height:1.12;letter-spacing:-.4px;}
+  .nl-hero p{margin:0;font-size:15px;opacity:.92;max-width:560px;}
+  .nl-updated{margin-top:16px;font-size:12.5px;opacity:.78;}
+  .nl-sec{margin:34px 0 0;}
+  .nl-sec h2{font-family:Georgia,serif;font-weight:400;font-size:21px;margin:0 0 4px;letter-spacing:-.2px;}
+  .nl-sec .note{color:var(--muted);font-size:14px;margin:0 0 14px;}
+  .nl-card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:18px 20px;}
+  .nl-status{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:22px;}
+  .nl-stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:12px 14px;}
+  .nl-stat .lbl{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;opacity:.72;font-weight:700;margin-bottom:5px;}
+  .nl-stat .val{font-size:14.5px;font-weight:600;line-height:1.35;}
+  .nl-day{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);margin-bottom:12px;overflow:hidden;}
+  .nl-day summary{cursor:pointer;list-style:none;padding:15px 18px;display:flex;align-items:center;gap:14px;background:linear-gradient(to right,#fbf9f4,#fff);font-weight:600;}
+  .nl-day summary::-webkit-details-marker{display:none;}
+  .nl-day summary::after{content:"＋";margin-left:auto;color:var(--muted);font-size:15px;transition:.2s;}
+  .nl-day[open] summary::after{content:"−";}
+  .nl-day[open] summary{border-bottom:1px solid var(--line);}
+  .nl-dnum{flex:0 0 auto;width:46px;height:46px;border-radius:11px;background:var(--pine);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;line-height:1;}
+  .nl-dnum small{font-size:8.5px;letter-spacing:.1em;opacity:.78;margin-bottom:3px;}
+  .nl-dnum span{font-size:19px;}
+  .nl-dtitle{font-size:15.5px;}
+  .nl-dsub{display:block;font-size:12.5px;color:var(--muted);font-weight:500;margin-top:3px;}
+  .nl-body{padding:6px 18px 16px;}
+  .nl-row{display:grid;grid-template-columns:88px 1fr;gap:13px;padding:11px 0;border-bottom:1px dashed var(--line);}
+  .nl-row:last-child{border-bottom:none;}
+  .nl-t{font-size:12.5px;font-weight:700;color:var(--pine);padding-top:2px;}
+  .nl-c{font-size:14.5px;color:#3c4a5a;}
+  .nl-c b{color:var(--ink);}
+  .nl-badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:6px;margin-left:7px;vertical-align:middle;}
   .b-offline{background:#f3ecf1;color:#7a4b6b;}
   .b-signal{background:#e8f1ec;color:#2f5d50;}
   .b-travel{background:#e6eef5;color:#2c5f80;}
-  .al-note{font-size:13.5px;background:#f7faf8;border-left:3px solid var(--pine-light);padding:9px 12px;border-radius:0 8px 8px 0;color:#2f4a42;margin-top:9px;}
-  .al-offline-note{font-size:13.5px;background:#faf6f9;border-left:3px solid var(--plum);padding:9px 12px;border-radius:0 8px 8px 0;color:#6b3f5d;margin-top:9px;}
-  /* contact list */
-  .al-contact{display:flex;align-items:center;gap:13px;padding:12px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap;}
-  .al-contact:last-child{border-bottom:none;}
-  .al-cname{font-weight:700;font-size:14.5px;flex:1;min-width:150px;}
-  .al-cnum{font-size:14px;color:#3c4a5a;font-variant-numeric:tabular-nums;}
-  .al-cnum a{color:var(--sky);text-decoration:none;font-weight:600;}
-  .al-em{font-size:12.5px;color:var(--muted);display:block;margin-top:2px;}
-  /* map */
-  .al-map{width:100%;height:290px;border:1px solid var(--line);border-radius:12px;background:#ece7dc;display:block;}
-  .al-pins{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:14px;}
-  .al-pin{background:#fbfaf6;border:1px solid var(--line);border-radius:11px;padding:12px 14px;font-size:13.5px;}
-  .al-pin b{display:block;font-size:14.5px;margin-bottom:3px;}
-  .al-pin span{color:var(--muted);font-size:12.5px;display:block;}
-  .al-pin a{color:var(--sky);text-decoration:none;font-weight:600;font-size:12.5px;}
-  /* flights */
-  .al-flight{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap;}
-  .al-flight:last-child{border-bottom:none;}
-  .al-fnum{font-weight:700;font-size:14.5px;min-width:70px;}
-  .al-froute{font-size:13.5px;color:#3c4a5a;flex:1;min-width:170px;}
-  .al-froute span{color:var(--muted);font-size:12.5px;}
-  .al-btn{display:inline-block;text-decoration:none;background:var(--sky);color:#fff !important;padding:7px 13px;border-radius:8px;font-size:12.5px;font-weight:600;}
-  .al-btn:hover{background:#3c7ea3;}
-  .al-foot{text-align:center;color:var(--muted);font-size:12.5px;margin-top:34px;padding-top:18px;border-top:1px solid var(--line);}
+  .nl-note{font-size:13.5px;background:#f7faf8;border-left:3px solid var(--pine-light);padding:9px 12px;border-radius:0 8px 8px 0;color:#2f4a42;margin-top:9px;}
+  .nl-offline-note{font-size:13.5px;background:#faf6f9;border-left:3px solid var(--plum);padding:9px 12px;border-radius:0 8px 8px 0;color:#6b3f5d;margin-top:9px;}
+  .nl-contact{display:flex;align-items:center;gap:13px;padding:12px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap;}
+  .nl-contact:last-child{border-bottom:none;}
+  .nl-cname{font-weight:700;font-size:14.5px;flex:1;min-width:150px;}
+  .nl-cnum{font-size:14px;color:#3c4a5a;font-variant-numeric:tabular-nums;}
+  .nl-cnum a{color:var(--sky);text-decoration:none;font-weight:600;}
+  .nl-em{font-size:12.5px;color:var(--muted);display:block;margin-top:2px;}
+  .nl-map{width:100%;height:290px;border:1px solid var(--line);border-radius:12px;background:#ece7dc;display:block;}
+  .nl-pins{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:14px;}
+  .nl-pin{background:#fbfaf6;border:1px solid var(--line);border-radius:11px;padding:12px 14px;font-size:13.5px;}
+  .nl-pin b{display:block;font-size:14.5px;margin-bottom:3px;}
+  .nl-pin span{color:var(--muted);font-size:12.5px;display:block;}
+  .nl-pin a{color:var(--sky);text-decoration:none;font-weight:600;font-size:12.5px;}
+  .nl-flight{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap;}
+  .nl-flight:last-child{border-bottom:none;}
+  .nl-fnum{font-weight:700;font-size:14.5px;min-width:70px;}
+  .nl-froute{font-size:13.5px;color:#3c4a5a;flex:1;min-width:170px;}
+  .nl-froute span{color:var(--muted);font-size:12.5px;}
+  .nl-btn{display:inline-block;text-decoration:none;background:var(--sky);color:#fff !important;padding:7px 13px;border-radius:8px;font-size:12.5px;font-weight:600;}
+  .nl-btn:hover{background:#3c7ea3;}
+  .nl-foot{text-align:center;color:var(--muted);font-size:12.5px;margin-top:36px;padding-top:18px;border-top:1px solid var(--line);}
   @media(max-width:560px){
-    .al-row{grid-template-columns:1fr;gap:3px;}
-    .al-t{padding-top:0;}
-    .al-hero{padding:28px 20px 24px;}
+    .nl-row{grid-template-columns:1fr;gap:3px;}
+    .nl-t{padding-top:0;}
+    .nl-hero{padding:28px 20px 24px;}
   }
 </style>
 
-<div class="al-wrap">
+<div class="nl-wrap">
 
-  <div class="al-hero">
-    <p class="al-kicker">Private · Family &amp; friends</p>
-    <h1>Where I am, roughly<br>Albanian Alps · 21–27 Sept 2026</h1>
-    <p>A simple tracker for my trip. Times are local. The mountains have almost no signal, so if I go quiet, that's why — not a problem.</p>
-    <p class="al-updated">Last updated: <span id="al-updated">21 September 2026, 09:00 CEST</span></p>
+  <div class="nl-hero">
+    <p class="nl-kicker">Privé · familie &amp; vrienden</p>
+    <h1>Waar ik ongeveer ben<br>Albanese Alpen · 21–27 september 2026</h1>
+    <p>Een simpel overzicht van mijn reis. Tijden zijn lokaal. In de bergen is bijna geen bereik, dus als je niks van me hoort, komt dat daardoor — niet omdat er iets mis is.</p>
+    <p class="nl-updated">Laatst bijgewerkt: <span id="nl-updated">21 september 2026, 09:00 CEST</span></p>
 
-    <div class="al-status">
-      <div class="al-stat"><div class="lbl">Now</div><div class="val">Northern Albania</div></div>
-      <div class="al-stat"><div class="lbl">Tonight</div><div class="val">Theth valley</div></div>
-      <div class="al-stat"><div class="lbl">Likely offline</div><div class="val">22–25 Sept</div></div>
-      <div class="al-stat"><div class="lbl">Home</div><div class="val">Sun 27, 11:35</div></div>
+    <div class="nl-status">
+      <div class="nl-stat"><div class="lbl">Nu</div><div class="val">Noord-Albanië</div></div>
+      <div class="nl-stat"><div class="lbl">Vannacht</div><div class="val">Theth-vallei</div></div>
+      <div class="nl-stat"><div class="lbl">Waarschijnlijk offline</div><div class="val">22–25 sept</div></div>
+      <div class="nl-stat"><div class="lbl">Thuis</div><div class="val">zo 27, 11:35</div></div>
     </div>
   </div>
 
-  <!-- WHAT'S HAPPENING -->
-  <div class="al-sec">
-    <h2>Day by day</h2>
-    <p class="note">Tap a day to open it. "Offline" days are when I almost certainly won't have signal.</p>
+  <!-- DAG TOT DAG -->
+  <div class="nl-sec">
+    <h2>Dag tot dag</h2>
+    <p class="note">Tik op een dag om hem open te klappen. "Offline"-dagen zijn dagen waarop ik vrijwel zeker geen bereik heb.</p>
 
-    <details class="al-day" open>
-      <summary><span class="al-dnum"><small>SEP</small><span>21</span></span>
-        <span class="al-dtitle">Flying in, driving to Theth<span class="al-dsub">Schiphol → Vienna → Tirana → mountains</span></span></summary>
-      <div class="al-body">
-        <div class="al-row"><div class="al-t">07:00</div><div class="al-c"><b>Leave Schiphol</b> — flight OS320, via Vienna.</div></div>
-        <div class="al-row"><div class="al-t">11:20</div><div class="al-c"><b>Land in Tirana</b> (flight OS751), collect the rental car.</div></div>
-        <div class="al-row"><div class="al-t">Afternoon</div><div class="al-c">Drive north. One stop in <b>Koplik</b> for fuel and supplies, then over the mountain pass into the valley.</div></div>
-        <div class="al-row"><div class="al-t">Evening</div><div class="al-c">Arrive <b>Theth</b>. First guesthouse night — breakfast and dinner included.<span class="al-badge b-signal">Signal fading</span></div></div>
-        <div class="al-note">I'll message when I arrive at Theth, likely early evening. After that, assume patchy signal.</div>
+    <details class="nl-day" open>
+      <summary><span class="nl-dnum"><small>SEP</small><span>21</span></span>
+        <span class="nl-dtitle">Aankomen en doorrijden naar Theth<span class="nl-dsub">Schiphol → Wenen → Tirana → de bergen in</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">07:00</div><div class="nl-c"><b>Vertrek vanaf Schiphol</b> — vlucht OS320, via Wenen.</div></div>
+        <div class="nl-row"><div class="nl-t">11:20</div><div class="nl-c"><b>Landing in Tirana</b> (vlucht OS751), huurauto ophalen.</div></div>
+        <div class="nl-row"><div class="nl-t">Middag</div><div class="nl-c">Naar het noorden rijden. Eén stop in <b>Koplik</b> voor brandstof en boodschappen, dan over de bergpas de vallei in.</div></div>
+        <div class="nl-row"><div class="nl-t">Avond</div><div class="nl-c">Aankomst in <b>Theth</b>. Eerste nacht in het guesthouse — ontbijt en diner inbegrepen.<span class="nl-badge b-signal">Bereik wordt minder</span></div></div>
+        <div class="nl-note">Ik stuur een berichtje als ik in Theth aankom, waarschijnlijk aan het begin van de avond. Daarna: uitgaan van wisselend bereik.</div>
       </div>
     </details>
 
-    <details class="al-day">
-      <summary><span class="al-dnum"><small>SEP</small><span>22</span></span>
-        <span class="al-dtitle">Theth — first full day<span class="al-dsub">Gentle walk, waterfalls, village</span></span></summary>
-      <div class="al-body">
-        <div class="al-row"><div class="al-t">Day</div><div class="al-c">Short walk to the <b>Grunas waterfall</b>, then the village: the old stone tower, the church in the meadow. Reading by the river.</div></div>
-        <div class="al-row"><div class="al-t">Night</div><div class="al-c">Guesthouse dinner. Early night.</div></div>
-        <div class="al-offline-note">Almost certainly <b>no usable phone signal</b> today. Totally expected.</div>
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>22</span></span>
+        <span class="nl-dtitle">Theth — eerste volle dag<span class="nl-dsub">Rustige wandeling, waterval, dorp</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">Dag</div><div class="nl-c">Korte wandeling naar de <b>Grunas-waterval</b>, daarna het dorp: de oude stenen toren, de kerk in de weide. Lezen aan de rivier.</div></div>
+        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Diner in het guesthouse. Vroeg naar bed.</div></div>
+        <div class="nl-offline-note">Vrijwel zeker <b>geen bruikbaar telefoonbereik</b> vandaag. Helemaal verwacht.</div>
       </div>
     </details>
 
-    <details class="al-day">
-      <summary><span class="al-dnum"><small>SEP</small><span>23</span></span>
-        <span class="al-dtitle">Theth — the big walk<span class="al-dsub">Out in the valley all day</span></span></summary>
-      <div class="al-body">
-        <div class="al-row"><div class="al-t">Day</div><div class="al-c">Hiking day — the <b>Blue Eye</b> pool up the valley, or a quieter valley-floor walk. Out from morning to late afternoon.</div></div>
-        <div class="al-row"><div class="al-t">Night</div><div class="al-c">Back at the guesthouse, dinner, packing a little for the drive.</div></div>
-        <div class="al-offline-note">Away from the village for most of the day — <b>don't expect replies</b> until evening at the earliest.</div>
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>23</span></span>
+        <span class="nl-dtitle">Theth — de grote wandeling<span class="nl-dsub">De hele dag in de vallei</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">Dag</div><div class="nl-c">Wandeldag — het <b>Blauwe Oog</b> stroomopwaarts in de vallei, of een rustigere wandeling over de valleibodem. Van 's ochtends tot laat in de middag onderweg.</div></div>
+        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Terug in het guesthouse, diner, alvast wat inpakken voor de rit.</div></div>
+        <div class="nl-offline-note">Het grootste deel van de dag weg van het dorp — <b>reken niet op antwoord</b> voor de avond.</div>
       </div>
     </details>
 
-    <details class="al-day">
-      <summary><span class="al-dnum"><small>SEP</small><span>24</span></span>
-        <span class="al-dtitle">Driving to Lëpushë<span class="al-dsub">Long road day, second valley</span></span></summary>
-      <div class="al-body">
-        <div class="al-row"><div class="al-t">Morning</div><div class="al-c">Pack up and drive back over the pass. Refuel and re-stock in <b>Koplik</b>.</div></div>
-        <div class="al-row"><div class="al-t">Afternoon</div><div class="al-c">North up the <b>Cem valley</b> — dramatic cliff road at Leqet e Hotit, past Tamarë and Selcë — to <b>Lëpushë</b>.</div></div>
-        <div class="al-row"><div class="al-t">Evening</div><div class="al-c">Arrive and settle into the second guesthouse, on a high meadow at ~1,260 m.<span class="al-badge b-signal">Signal maybe</span></div></div>
-        <div class="al-note">This is the day I'm <b>on the road for hours</b>. Best chance of a message is the evening.</div>
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>24</span></span>
+        <span class="nl-dtitle">Rijden naar Lëpushë<span class="nl-dsub">Lange rijdag, tweede vallei</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">Ochtend</div><div class="nl-c">Inpakken en terug over de bergpas. Tanken en boodschappen doen in <b>Koplik</b>.</div></div>
+        <div class="nl-row"><div class="nl-t">Middag</div><div class="nl-c">Noordwaarts door de <b>Cem-vallei</b> — spectaculaire klifweg bij Leqet e Hotit, langs Tamarë en Selcë — naar <b>Lëpushë</b>.</div></div>
+        <div class="nl-row"><div class="nl-t">Avond</div><div class="nl-c">Aankomst en intrekken in het tweede guesthouse, op een hooggelegen weide op ~1.260 m.<span class="nl-badge b-signal">Misschien bereik</span></div></div>
+        <div class="nl-note">Dit is de dag dat ik <b>uren in de auto zit</b>. De beste kans op een bericht is 's avonds.</div>
       </div>
     </details>
 
-    <details class="al-day">
-      <summary><span class="al-dnum"><small>SEP</small><span>25</span></span>
-        <span class="al-dtitle">Lëpushë — a quiet day<span class="al-dsub">Mountains, meadow, not much else</span></span></summary>
-      <div class="al-body">
-        <div class="al-row"><div class="al-t">Day</div><div class="al-c">A hike if the weather's good — a peak above the village, or a drive to <b>Vermosh</b> and its waterfall. Otherwise: reading, meadow, absolutely nothing.</div></div>
-        <div class="al-row"><div class="al-t">Night</div><div class="al-c">Dinner at the guesthouse. Stars.</div></div>
-        <div class="al-offline-note">Same as Theth — <b>very limited signal</b>. No reply doesn't mean anything's wrong.</div>
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>25</span></span>
+        <span class="nl-dtitle">Lëpushë — een rustige dag<span class="nl-dsub">Bergen, weide, verder niet veel</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">Dag</div><div class="nl-c">Een wandeling als het weer goed is — een top boven het dorp, of een ritje naar <b>Vermosh</b> en de waterval daar. Anders: lezen, weide, helemaal niks.</div></div>
+        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Diner in het guesthouse. Sterren.</div></div>
+        <div class="nl-offline-note">Net als in Theth — <b>heel beperkt bereik</b>. Geen antwoord betekent niet dat er iets aan de hand is.</div>
       </div>
     </details>
 
-    <details class="al-day">
-      <summary><span class="al-dnum"><small>SEP</small><span>26</span></span>
-        <span class="al-dtitle">Down to the capital<span class="al-dsub">Back to Tirana, last night near the airport</span></span></summary>
-      <div class="al-body">
-        <div class="al-row"><div class="al-t">Morning</div><div class="al-c">Check out and drive south to <b>Tirana</b> (~4–4.5 hrs).</div></div>
-        <div class="al-row"><div class="al-t">Afternoon</div><div class="al-c">Wandering the city centre: the main square, the bunker museum, the market. Last dinner out.</div></div>
-        <div class="al-row"><div class="al-t">Night</div><div class="al-c">Staying by the <b>airport</b> for the early flight.<span class="al-badge b-signal">Signal back</span></div></div>
-        <div class="al-note">Roughly 21:30 onward I'll have signal again. Good time to catch me.</div>
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>26</span></span>
+        <span class="nl-dtitle">Naar de hoofdstad<span class="nl-dsub">Terug naar Tirana, laatste nacht bij het vliegveld</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">Ochtend</div><div class="nl-c">Uitchecken en naar het zuiden rijden naar <b>Tirana</b> (~4–4,5 uur).</div></div>
+        <div class="nl-row"><div class="nl-t">Middag</div><div class="nl-c">Rondlopen in het centrum: het grote plein, het bunkermuseum, de markt. Laatste diner buiten de deur.</div></div>
+        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Slapen bij het <b>vliegveld</b> vanwege de vroege vlucht.<span class="nl-badge b-signal">Bereik terug</span></div></div>
+        <div class="nl-note">Vanaf ongeveer 21:30 heb ik weer bereik. Goed moment om me te pakken te krijgen.</div>
       </div>
     </details>
 
-    <details class="al-day">
-      <summary><span class="al-dnum"><small>SEP</small><span>27</span></span>
-        <span class="al-dtitle">Flying home<span class="al-dsub">Tirana → Vienna → Amsterdam</span></span></summary>
-      <div class="al-body">
-        <div class="al-row"><div class="al-t">06:00</div><div class="al-c"><b>Leave Tirana</b> — flight OS760 to Vienna.</div></div>
-        <div class="al-row"><div class="al-t">09:40</div><div class="al-c">Vienna → Amsterdam, flight OS313.</div></div>
-        <div class="al-row"><div class="al-t">11:35</div><div class="al-c"><b>Land at Schiphol.</b> Home.<span class="al-badge b-travel">Don't ring early</span></div></div>
-        <div class="al-note">The 06:00 takeoff means I'm up around 03:30 — I'll be off the grid until I land. Track the flights below instead.</div>
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>27</span></span>
+        <span class="nl-dtitle">Naar huis vliegen<span class="nl-dsub">Tirana → Wenen → Amsterdam</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">06:00</div><div class="nl-c"><b>Vertrek uit Tirana</b> — vlucht OS760 naar Wenen.</div></div>
+        <div class="nl-row"><div class="nl-t">09:40</div><div class="nl-c">Wenen → Amsterdam, vlucht OS313.</div></div>
+        <div class="nl-row"><div class="nl-t">11:35</div><div class="nl-c"><b>Landing op Schiphol.</b> Thuis.<span class="nl-badge b-travel">Niet vroeg bellen</span></div></div>
+        <div class="nl-note">Door de vlucht van 06:00 sta ik rond 03:30 op — ik ben onbereikbaar tot ik land. Volg de vluchten hieronder.</div>
       </div>
     </details>
   </div>
 
-  <!-- FLIGHTS -->
-  <div class="al-sec">
-    <h2>Follow the flights live</h2>
-    <p class="note">If you want to know exactly where the plane is — delay, position, arrival time — tap "Track".</p>
-    <div class="al-card">
-      <div class="al-flight">
-        <div class="al-fnum">OS320</div>
-        <div class="al-froute">Amsterdam → Vienna<br><span>Mon 21 · 07:00 → 08:50</span></div>
-        <a class="al-btn" href="https://www.flightradar24.com/data/flights/os320" target="_blank" rel="noopener">Track</a>
+  <!-- VLUCHTEN -->
+  <div class="nl-sec">
+    <h2>Volg de vluchten live</h2>
+    <p class="note">Wil je precies weten waar het vliegtuig is — vertraging, positie, aankomsttijd — tik dan op "Volgen".</p>
+    <div class="nl-card">
+      <div class="nl-flight">
+        <div class="nl-fnum">OS320</div>
+        <div class="nl-froute">Amsterdam → Wenen<br><span>ma 21 · 07:00 → 08:50</span></div>
+        <a class="nl-btn" href="https://www.flightradar24.com/data/flights/os320" target="_blank" rel="noopener">Volgen</a>
       </div>
-      <div class="al-flight">
-        <div class="al-fnum">OS751</div>
-        <div class="al-froute">Vienna → Tirana<br><span>Mon 21 · 09:50 → 11:20</span></div>
-        <a class="al-btn" href="https://www.flightradar24.com/data/flights/os751" target="_blank" rel="noopener">Track</a>
+      <div class="nl-flight">
+        <div class="nl-fnum">OS751</div>
+        <div class="nl-froute">Wenen → Tirana<br><span>ma 21 · 09:50 → 11:20</span></div>
+        <a class="nl-btn" href="https://www.flightradar24.com/data/flights/os751" target="_blank" rel="noopener">Volgen</a>
       </div>
-      <div class="al-flight">
-        <div class="al-fnum">OS760</div>
-        <div class="al-froute">Tirana → Vienna<br><span>Sun 27 · 06:00 → 07:35</span></div>
-        <a class="al-btn" href="https://www.flightradar24.com/flight/os760" target="_blank" rel="noopener">Track</a>
+      <div class="nl-flight">
+        <div class="nl-fnum">OS760</div>
+        <div class="nl-froute">Tirana → Wenen<br><span>zo 27 · 06:00 → 07:35</span></div>
+        <a class="nl-btn" href="https://www.flightradar24.com/flight/os760" target="_blank" rel="noopener">Volgen</a>
       </div>
-      <div class="al-flight">
-        <div class="al-fnum">OS313</div>
-        <div class="al-froute">Vienna → Amsterdam<br><span>Sun 27 · 09:40 → 11:35</span></div>
-        <a class="al-btn" href="https://www.flightradar24.com/data/flights/os313" target="_blank" rel="noopener">Track</a>
+      <div class="nl-flight">
+        <div class="nl-fnum">OS313</div>
+        <div class="nl-froute">Wenen → Amsterdam<br><span>zo 27 · 09:40 → 11:35</span></div>
+        <a class="nl-btn" href="https://www.flightradar24.com/data/flights/os313" target="_blank" rel="noopener">Volgen</a>
       </div>
-      <div class="al-note">These update in real time. On the way home, OS760 is the one to watch — once it lands in Vienna, I'm on the last leg.</div>
+      <div class="nl-note">Deze worden live bijgewerkt. Op de terugweg is OS760 de belangrijkste — zodra die in Wenen landt, zit ik op het laatste stuk.</div>
     </div>
   </div>
 
-  <!-- MAP -->
-  <div class="al-sec">
-    <h2>Roughly where I'll be</h2>
-    <p class="note">Not precise live tracking — just the areas. The two mountain valleys have almost no signal by design.</p>
-    <div class="al-card">
-      <iframe class="al-map" loading="lazy" title="Overview map of the trip"
+  <!-- KAART -->
+  <div class="nl-sec">
+    <h2>Ongeveer waar ik ben</h2>
+    <p class="note">Geen exacte live-tracking — alleen de gebieden. De twee bergvalleien hebben expres bijna geen bereik.</p>
+    <div class="nl-card">
+      <iframe class="nl-map" loading="lazy" title="Overzichtskaart van de reis"
         src="https://www.openstreetmap.org/export/embed.html?bbox=19.40%2C41.20%2C20.00%2C42.70&layer=mapnik&marker=42.415%2C19.757"></iframe>
-      <div class="al-pins">
-        <div class="al-pin"><b>① Theth valley</b><span>21–24 Sept · first two nights</span><span>≈42.415 N, 19.757 E</span><a href="https://www.openstreetmap.org/?mlat=42.415&mlon=19.757#map=12/42.415/19.757" target="_blank" rel="noopener">Open map →</a></div>
-        <div class="al-pin"><b>② Lëpushë</b><span>24–26 Sept · next three nights</span><span>≈42.592 N, 19.685 E</span><a href="https://www.openstreetmap.org/?mlat=42.592&mlon=19.685#map=12/42.592/19.685" target="_blank" rel="noopener">Open map →</a></div>
-        <div class="al-pin"><b>③ Tirana &amp; airport</b><span>26–27 Sept · last night</span><span>≈41.335 N, 19.820 E</span><a href="https://www.openstreetmap.org/?mlat=41.335&mlon=19.820#map=12/41.335/19.820" target="_blank" rel="noopener">Open map →</a></div>
+      <div class="nl-pins">
+        <div class="nl-pin"><b>① Theth-vallei</b><span>21–24 sept · eerste twee nachten</span><span>≈42.415 N, 19.757 O</span><a href="https://www.openstreetmap.org/?mlat=42.415&mlon=19.757#map=12/42.415/19.757" target="_blank" rel="noopener">Kaart openen →</a></div>
+        <div class="nl-pin"><b>② Lëpushë</b><span>24–26 sept · volgende drie nachten</span><span>≈42.592 N, 19.685 O</span><a href="https://www.openstreetmap.org/?mlat=42.592&mlon=19.685#map=12/42.592/19.685" target="_blank" rel="noopener">Kaart openen →</a></div>
+        <div class="nl-pin"><b>③ Tirana &amp; vliegveld</b><span>26–27 sept · laatste nacht</span><span>≈41.335 N, 19.820 O</span><a href="https://www.openstreetmap.org/?mlat=41.335&mlon=19.820#map=12/41.335/19.820" target="_blank" rel="noopener">Kaart openen →</a></div>
       </div>
-      <div class="al-note">The drive between the valleys loops back through the town of Koplik — there's no road straight across the mountains.</div>
+      <div class="nl-note">De rit tussen de valleien gaat via het stadje Koplik — er is geen weg recht over de bergen.</div>
     </div>
   </div>
 
-  <!-- CONTACTS -->
-  <div class="al-sec">
-    <h2>If you actually need to reach me</h2>
-    <p class="note">Not for "how are you" — for genuine urgency. I'll be slow to answer anything else, and often can't answer at all.</p>
-    <div class="al-card">
-      <div class="al-contact">
-        <div class="al-cname">My mobile<span class="al-em">Roaming · don't rely on it in the valleys</span></div>
-        <div class="al-cnum"><a href="tel:+31600000000">+31 6 ·· ·· ·· ··</a></div>
+  <!-- CONTACT -->
+  <div class="nl-sec">
+    <h2>Als je me echt moet bereiken</h2>
+    <p class="note">Niet voor "hoe gaat het" — voor echte urgentie. Ik reageer traag op al het andere, en vaak kan ik helemaal niet reageren.</p>
+    <div class="nl-card">
+      <div class="nl-contact">
+        <div class="nl-cname">Mijn mobiel<span class="nl-em">Roaming · reken er in de valleien niet op</span></div>
+        <div class="nl-cnum"><a href="tel:+31600000000">+31 6 ·· ·· ·· ··</a></div>
       </div>
-      <div class="al-contact">
-        <div class="al-cname">Rental car — emergency line<span class="al-em">Sunny Cars, 24/7, Dutch-speaking</span></div>
-        <div class="al-cnum"><a href="tel:+31235699690">+31 23 569 9690</a></div>
+      <div class="nl-contact">
+        <div class="nl-cname">Huurauto — noodlijn<span class="nl-em">Sunny Cars, 24/7, Nederlandstalig</span></div>
+        <div class="nl-cnum"><a href="tel:+31235699690">+31 23 569 9690</a></div>
       </div>
-      <div class="al-contact">
-        <div class="al-cname">Enterprise Albania (local desk)<span class="al-em">Tirana airport</span></div>
-        <div class="al-cnum"><a href="tel:+355676000900">+355 67 600 0900</a></div>
+      <div class="nl-contact">
+        <div class="nl-cname">Enterprise Albanië (lokale balie)<span class="nl-em">Vliegveld Tirana</span></div>
+        <div class="nl-cnum"><a href="tel:+355676000900">+355 67 600 0900</a></div>
       </div>
-      <div class="al-contact">
-        <div class="al-cname">Local emergency number<span class="al-em">Albania — for anything serious, on the ground</span></div>
-        <div class="al-cnum"><a href="tel:112">112</a></div>
+         <div class="nl-contact">
+        <div class="nl-cname">FBTO Alarmcentrale () <span class="nl-em">Eurocross</span></div>
+        <div class="nl-cnum"><a href="tel:+31582345650 ">+31 (0)58 234 56 50</a></div>
       </div>
-      <div class="al-note">If I'm unreachable for a long stretch, don't panic. <b>It's the mountains, not an emergency.</b> If something is genuinely wrong, the rental emergency line can always reach me.</div>
-    </div>
   </div>
 
-  <div class="al-foot">
-    Private page · Albania trip 21–27 September 2026<br>
-    This page is not indexed by search engines.
+  <div class="nl-foot">
+    Privépagina · reis Albanië 21–27 september 2026<br>
+    Deze pagina wordt niet geïndexeerd door zoekmachines.
   </div>
 
 </div>
 
 <script>
-/* === COPY TO HERE === */
-/* Sets the "last updated" stamp so family know the info is current.
-   Change the date text below whenever you update the page. */
+/* Zet de "laatst bijgewerkt"-stempel. Pas de datum hieronder aan
+   wanneer je de pagina bijwerkt. */
 (function(){
-  var el = document.getElementById('al-updated');
-  if(el){ el.textContent = '21 September 2026, 09:00 CEST'; }
+  var el = document.getElementById('nl-updated');
+  if(el){ el.textContent = '21 september 2026, 09:00 CEST'; }
 })();
 </script>
 </body>
