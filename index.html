@@ -18,11 +18,41 @@
     color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;background:var(--paper);
   }
   .nl-wrap *{box-sizing:border-box;}
+
+  /* --- statusbalk --- */
+  .nl-statusbar{
+    background:#fbf9f4;border:1px solid var(--line);border-left:5px solid var(--pine);
+    border-radius:12px;padding:15px 20px;margin-top:18px;box-shadow:var(--shadow);
+    display:flex;align-items:center;gap:14px;
+  }
+  .nl-dot{
+    flex:0 0 auto;width:13px;height:13px;border-radius:50%;background:var(--pine);
+    animation:nl-pulse 2s infinite;
+  }
+  @keyframes nl-pulse{
+    0%{box-shadow:0 0 0 0 rgba(47,93,80,.5);}
+    70%{box-shadow:0 0 0 11px rgba(47,93,80,0);}
+    100%{box-shadow:0 0 0 0 rgba(47,93,80,0);}
+  }
+  .nl-statustxt{flex:1;min-width:0;}
+  .nl-statusbar .lbl{font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:2px;}
+  .nl-statusbar .val{font-size:17.5px;font-weight:700;color:var(--pine);line-height:1.3;}
+  .nl-statusbar .sub{font-size:13px;color:var(--muted);margin-top:3px;}
+  .nl-statusbar.nlb-1{border-left-color:#8a969f;}
+  .nl-statusbar.nlb-1 .nl-dot{background:#8a969f;animation:none;}
+  .nl-statusbar.nlb-1 .val{color:#5a6b7d;}
+  .nl-statusbar.nlb-2{border-left-color:var(--sky);}
+  .nl-statusbar.nlb-2 .nl-dot{background:var(--sky);animation:none;}
+  .nl-statusbar.nlb-2 .val{color:#2c5f80;}
+  .nl-statusbar.nlb-3{border-left-color:var(--plum);}
+  .nl-statusbar.nlb-3 .nl-dot{background:var(--plum);}
+  .nl-statusbar.nlb-3 .val{color:var(--plum);}
+
   .nl-hero{
     background:radial-gradient(circle at 84% 8%, rgba(74,141,181,.4), transparent 55%),
                linear-gradient(160deg,#22493f 0%,#2f5d50 48%,#3d6d5b 100%);
     color:#f5f1e8;border-radius:16px;padding:36px 28px 32px;position:relative;overflow:hidden;
-    box-shadow:var(--shadow);margin-top:18px;
+    box-shadow:var(--shadow);margin-top:14px;
   }
   .nl-kicker{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;opacity:.78;margin:0 0 9px;font-weight:600;}
   .nl-hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(25px,5vw,36px);margin:0 0 10px;line-height:1.12;letter-spacing:-.4px;}
@@ -53,6 +83,7 @@
   .nl-t{font-size:12.5px;font-weight:700;color:var(--pine);padding-top:2px;}
   .nl-c{font-size:14.5px;color:#3c4a5a;}
   .nl-c b{color:var(--ink);}
+  .nl-sleep{font-size:13px;color:var(--plum);margin-top:2px;font-weight:600;}
   .nl-badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:6px;margin-left:7px;vertical-align:middle;}
   .b-offline{background:#f3ecf1;color:#7a4b6b;}
   .b-signal{background:#e8f1ec;color:#2f5d50;}
@@ -104,12 +135,23 @@
     .nl-t{padding-top:0;}
     .nl-hero{padding:28px 20px 24px;}
     #routeKaart{height:380px;}
+    .nl-statusbar .val{font-size:16px;}
   }
 </style>
 </head>
 <body>
 
 <div class="nl-wrap">
+
+  <!-- STATUS -->
+  <div class="nl-statusbar" id="nl-statusbar">
+    <span class="nl-dot"></span>
+    <div class="nl-statustxt">
+      <div class="lbl" id="nls-label">Nu</div>
+      <div class="val" id="nls-val">…</div>
+      <div class="sub" id="nls-sub"></div>
+    </div>
+  </div>
 
   <div class="nl-hero">
     <p class="nl-kicker">Privé · familie &amp; vrienden</p>
@@ -135,9 +177,10 @@
         <span class="nl-dtitle">Aankomen en doorrijden naar Theth<span class="nl-dsub">Schiphol → Wenen → Tirana → de bergen in</span></span></summary>
       <div class="nl-body">
         <div class="nl-row"><div class="nl-t">07:00</div><div class="nl-c"><b>Vertrek vanaf Schiphol</b> — vlucht OS320, via Wenen.</div></div>
-        <div class="nl-row"><div class="nl-t">11:20</div><div class="nl-c"><b>Landing in Tirana</b> (vlucht OS751). Huurauto ophalen bij de Enterprise-balie in de aankomsthal; de auto staat vanaf 12:00 voor me klaar.</div></div>
-        <div class="nl-row"><div class="nl-t">Middag</div><div class="nl-c">Naar het noorden rijden. Eén stop in <b>Koplik</b> voor brandstof en boodschappen, dan over de bergpas de vallei in. Onderweg nergens lang stilstaan — het moet voor donker.</div></div>
-        <div class="nl-row"><div class="nl-t">Avond</div><div class="nl-c">Aankomst in <b>Theth</b>. Eerste nacht in het guesthouse — ontbijt en diner inbegrepen.<span class="nl-badge b-signal">Bereik wordt minder</span></div></div>
+        <div class="nl-row"><div class="nl-t">11:20</div><div class="nl-c"><b>Landing in Tirana</b> (vlucht OS751). Huurauto ophalen bij de Enterprise-balie in de aankomsthal.</div></div>
+        <div class="nl-row"><div class="nl-t">12:30</div><div class="nl-c">Auto mee, naar het noorden. Eén stop in <b>Koplik</b> (rond 14:00) voor brandstof en boodschappen, dan over de bergpas de vallei in. Onderweg nergens lang stilstaan — het moet voor donker.</div></div>
+        <div class="nl-row"><div class="nl-t">17:00</div><div class="nl-c">Aankomst in <b>Theth</b> (rond 16:30–17:00). Ontbijt en diner inbegrepen.<span class="nl-badge b-signal">Bereik wordt minder</span>
+          <div class="nl-sleep">🛏 Kulla e Sadri Lukes</div></div></div>
         <div class="nl-note">Ik stuur een berichtje als ik in Theth aankom, waarschijnlijk aan het begin van de avond. Daarna: uitgaan van wisselend bereik.</div>
       </div>
     </details>
@@ -147,7 +190,8 @@
         <span class="nl-dtitle">Theth — de enige volle dag<span class="nl-dsub">Kies m'n wandeling: groot of rustig</span></span></summary>
       <div class="nl-body">
         <div class="nl-row"><div class="nl-t">Dag</div><div class="nl-c">Het <b>Blauwe Oog</b> (Syri i Kaltër) stroomopwaarts: 5 tot 7 uur heen en terug, of met de auto naar Nërlysaj en dan nog 1,5 tot 2 uur. Rustiger alternatief: de <b>Grunas-waterval</b>, de oude stenen toren en de kerk in de weide.</div></div>
-        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Diner in het guesthouse, daarna alvast wat inpakken voor de rit van morgen.</div></div>
+        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Diner in het guesthouse, daarna alvast wat inpakken voor de rit van morgen.
+          <div class="nl-sleep">🛏 Kulla e Sadri Lukes</div></div></div>
         <div class="nl-offline-note">Vrijwel zeker <b>geen bruikbaar telefoonbereik</b> vandaag. Helemaal verwacht.</div>
       </div>
     </details>
@@ -158,7 +202,8 @@
       <div class="nl-body">
         <div class="nl-row"><div class="nl-t">Ochtend</div><div class="nl-c">Uitchecken (kan tot 20:00) en terug over de bergpas <b>Qafë e Thorës</b>.</div></div>
         <div class="nl-row"><div class="nl-t">Middag</div><div class="nl-c">Tanken en boodschappen in <b>Koplik</b> — mijn laatste stop met voorzieningen. Dan noordwaarts door de Cem-vallei: de klifweg bij <b>Leqet e Hotit</b>, langs Tamarë, Selcë en Lëpushë, helemaal door naar <b>Vermosh</b>, het noordelijkste dorp van Albanië.</div></div>
-        <div class="nl-row"><div class="nl-t">Avond</div><div class="nl-c">Aankomst en intrekken in het tweede guesthouse (check-in vanaf 10:30).<span class="nl-badge b-signal">Misschien bereik</span></div></div>
+        <div class="nl-row"><div class="nl-t">18:00</div><div class="nl-c">Aankomst en intrekken in het tweede guesthouse.<span class="nl-badge b-signal">Misschien bereik</span>
+          <div class="nl-sleep">🛏 Peraj Guesthouse</div></div></div>
         <div class="nl-note">Ongeveer <b>4 tot 5 uur rijden</b> (133 km). De beste kans op een bericht is 's avonds.</div>
       </div>
     </details>
@@ -168,7 +213,8 @@
         <span class="nl-dtitle">Vermosh — wandeldag<span class="nl-dsub">Waterval en kloof, vanaf de deur</span></span></summary>
       <div class="nl-body">
         <div class="nl-row"><div class="nl-t">Dag</div><div class="nl-c">De <b>Gjanve-waterval</b> en de <b>Bashkimi-kloof</b> (Kanioni i Bashkimit) liggen op loopafstand: een makkelijke route van zo'n 10 km heen en terug, dwars door het dorp. Als het weer goed is kan het ook een top boven het dal worden. Anders: lezen op de weide.</div></div>
-        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Diner in het guesthouse. Sterren.</div></div>
+        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Diner in het guesthouse. Sterren.
+          <div class="nl-sleep">🛏 Peraj Guesthouse</div></div></div>
         <div class="nl-offline-note">Net als in Theth — <b>heel beperkt bereik</b>. Geen antwoord betekent niet dat er iets aan de hand is.</div>
       </div>
     </details>
@@ -178,18 +224,20 @@
         <span class="nl-dtitle">Vermosh — tweede dag<span class="nl-dsub">Rustig, of nog een wandeling</span></span></summary>
       <div class="nl-body">
         <div class="nl-row"><div class="nl-t">Dag</div><div class="nl-c">Vrije dag. Een stuk richting <b>Lëpushë</b> wandelen, of <b>Berizhdoli</b> (1.977 m) als ik nog een top wil. Of gewoon de weide in met een boek. Morgen rijd ik terug, dus ik houd het los.</div></div>
-        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Diner, vroeg naar bed.</div></div>
+        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Diner, vroeg naar bed.
+          <div class="nl-sleep">🛏 Peraj Guesthouse</div></div></div>
         <div class="nl-offline-note">Ook vandaag <b>nauwelijks bereik</b>. Alles goed.</div>
       </div>
     </details>
 
     <details class="nl-day">
       <summary><span class="nl-dnum"><small>SEP</small><span>26</span></span>
-        <span class="nl-dtitle">Naar de hoofdstad<span class="nl-dsub">Terug naar Tirana, laatste nacht bij het vliegveld</span></span></summary>
+        <span class="nl-dtitle">Naar de hoofdstad<span class="nl-dsub">Terug naar Tirana, laatste nacht in de stad</span></span></summary>
       <div class="nl-body">
         <div class="nl-row"><div class="nl-t">Ochtend</div><div class="nl-c">Uitchecken voor 11:00 en naar het zuiden rijden. Ongeveer 4 tot 4,5 uur.</div></div>
         <div class="nl-row"><div class="nl-t">Middag</div><div class="nl-c">Rondlopen in het centrum: het Skanderbegplein, het bunkermuseum, de markt. Laatste diner buiten de deur.</div></div>
-        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Slapen bij het <b>vliegveld</b> vanwege de vroege vlucht.<span class="nl-badge b-signal">Bereik terug</span></div></div>
+        <div class="nl-row"><div class="nl-t">15:30</div><div class="nl-c">In Tirana.<span class="nl-badge b-signal">Bereik terug</span>
+          <div class="nl-sleep">🛏 Areela Boutique Hotel</div></div></div>
         <div class="nl-note">Ik ben er <b>'s middags</b> — tussen ongeveer <b>14:00 en 17:00</b> heb ik rustig de tijd om te bellen of te appen. Daarna eet ik en ga ik vroeg naar bed, want ik moet om 03:30 op.</div>
       </div>
     </details>
@@ -198,6 +246,7 @@
       <summary><span class="nl-dnum"><small>SEP</small><span>27</span></span>
         <span class="nl-dtitle">Naar huis vliegen<span class="nl-dsub">Tirana → Wenen → Amsterdam</span></span></summary>
       <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">04:00</div><div class="nl-c">Auto inleveren bij het <b>vliegveld</b> (buiten openingstijden, via de keybox).</div></div>
         <div class="nl-row"><div class="nl-t">06:00</div><div class="nl-c"><b>Vertrek uit Tirana</b> — vlucht OS760 naar Wenen.</div></div>
         <div class="nl-row"><div class="nl-t">09:40</div><div class="nl-c">Wenen → Amsterdam, vlucht OS313.</div></div>
         <div class="nl-row"><div class="nl-t">11:35</div><div class="nl-c"><b>Landing op Schiphol.</b> Thuis.<span class="nl-badge b-travel">Niet vroeg bellen</span></div></div>
@@ -304,7 +353,7 @@
 </div>
 
 <script>
-/* ===== Datums ===== */
+/* ===== 1. Datums ===== */
 var LAATST_BIJGEWERKT = '2026-09-18';
 (function(){
   var M = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
@@ -321,7 +370,60 @@ var LAATST_BIJGEWERKT = '2026-09-18';
   if(td){ td.textContent = nl(new Date(), true) + ' (lokaal)'; }
 })();
 
-/* ===== Kaart ===== */
+/* ===== 2. Statusbalk — indicatief =====
+   Gewone lokale tijden (NL en AL lopen in september gelijk).
+   Grove blokken: het is een verwachting, geen tracker. */
+(function(){
+  var bar = document.getElementById('nl-statusbar');
+  if(!bar) return;
+
+  /* [jaar, maand, dag, uur, minuut, status, toelichting, kleur] */
+  var plan = [
+    [2026,9,21, 5, 0, 'In het vliegtuig',            'Onderweg naar Tirana, via Wenen',          'nlb-2'],
+    [2026,9,21,11,20, 'Aangekomen in Tirana',        'Auto ophalen en de bergen in',             'nlb-2'],
+    [2026,9,21,12,30, 'Onderweg naar Theth',         'Via Shkodër en Koplik, over de bergpas',   'nlb-2'],
+    [2026,9,21,17, 0, 'In Theth',                    'Twee nachten in de vallei',                ''],
+    [2026,9,23, 9, 0, 'Onderweg naar Vermosh',       'Via Koplik en de Cem-vallei',              'nlb-2'],
+    [2026,9,23,18, 0, 'In Vermosh',                  'Drie nachten, het noordelijkste dorp',     'nlb-3'],
+    [2026,9,26,10,30, 'Onderweg naar Tirana',        'Terug naar het zuiden',                    'nlb-2'],
+    [2026,9,26,15,30, 'In Tirana',                   'Laatste middag en nacht',                  'nlb-3'],
+    [2026,9,27, 4, 0, 'In het vliegtuig naar huis',  'Via Wenen naar Amsterdam',                 'nlb-2'],
+    [2026,9,27,12, 0, 'Weer thuis!',                 'De reis zit erop',                         'nlb-1']
+  ];
+
+  var nu = new Date();
+  var gekozen = null, label = 'Nu';
+
+  for(var i = 0; i < plan.length; i++){
+    var p = plan[i];
+    var start = new Date(p[0], p[1]-1, p[2], p[3], p[4]);
+    var eind = (i + 1 < plan.length)
+      ? new Date(plan[i+1][0], plan[i+1][1]-1, plan[i+1][2], plan[i+1][3], plan[i+1][4])
+      : Infinity;
+    if(nu >= start && nu < eind){ gekozen = p; break; }
+  }
+
+  if(!gekozen){
+    var e = plan[0];
+    var vertrek = new Date(e[0], e[1]-1, e[2], e[3], e[4]);
+    var dagen = Math.ceil((vertrek - nu) / 86400000);
+    if(nu >= vertrek){
+      gekozen = e;
+    }else{
+      label = 'Voorpret';
+      gekozen = [0,0,0,0,0, 'Reis nog niet begonnen',
+        dagen <= 1 ? 'Ik vertrek morgen' : 'Ik vertrek over ' + dagen + ' dagen',
+        'nlb-1'];
+    }
+  }
+
+  bar.className = 'nl-statusbar' + (gekozen[7] ? ' ' + gekozen[7] : '');
+  document.getElementById('nls-label').textContent = label;
+  document.getElementById('nls-val').textContent = gekozen[5];
+  document.getElementById('nls-sub').textContent = gekozen[6];
+})();
+
+/* ===== 3. Kaart ===== */
 (function(){
   if(typeof L === 'undefined'){ return; }
 
@@ -332,7 +434,6 @@ var LAATST_BIJGEWERKT = '2026-09-18';
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
-  /* Echte weglijn: Tirana -> Shkodër -> Koplik -> Theth */
   var heen = [
     [41.4150,19.7234],[41.4302,19.7226],[41.4211,19.7025],[41.4533,19.7051],[41.4951,19.6786],
     [41.6022,19.6678],[41.6770,19.6737],[41.7200,19.6633],[41.7742,19.6285],[41.7805,19.6414],
@@ -342,7 +443,6 @@ var LAATST_BIJGEWERKT = '2026-09-18';
     [42.3982,19.6974],[42.3838,19.7534],[42.4162,19.7570]
   ];
 
-  /* Echte weglijn: Theth -> terug -> Koplik -> Leqet e Hotit -> Vermosh */
   var naarVermosh = [
     [42.4162,19.7570],[42.3872,19.7530],[42.3838,19.7534],[42.3886,19.7418],[42.3885,19.7197],
     [42.3926,19.7151],[42.3907,19.7062],[42.3995,19.6483],[42.3833,19.6343],[42.3478,19.6358],
@@ -356,7 +456,6 @@ var LAATST_BIJGEWERKT = '2026-09-18';
     [42.5368,19.6990],[42.5334,19.7200],[42.5490,19.7215],[42.5790,19.7449],[42.5928,19.6805]
   ];
 
-  /* Terugreis = dezelfde wegen in omgekeerde richting */
   var terug = naarVermosh.slice().reverse().concat(heen.slice().reverse());
 
   L.polyline(heen, {color:'#4a8db5', weight:4, opacity:.9, lineJoin:'round'})
