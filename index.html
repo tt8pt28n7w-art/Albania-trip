@@ -84,6 +84,316 @@
   .nl-froute span{color:var(--muted);font-size:12.5px;}
   .nl-btn{display:inline-block;text-decoration:none;background:var(--sky);color:#fff !important;padding:7px 13px;border-radius:8px;font-size:12.5px;font-weight:600;}
   .nl-btn:hover{background:#3c7ea3;}
+  /* --- routekaart (SVG) --- */
+  .nl-route{width:100%;height:auto;max-width:400px;display:block;margin:0 auto;}
+  .nl-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--muted);}
+  .nl-leg{display:flex;align-items:center;gap:7px;}
+  .nl-leg .sw{width:22px;height:0;border-top:3px solid var(--sky);display:inline-block;border-radius:2px;}
+  .nl-leg .sw.dashed{border-top:2px dashed #9db8cc;}
+  .nl-leg .sw.dot{width:13px;height:13px;border:none;border-radius:50%;background:var(--pine);}
+  .nl-leg .sw.dotsmall{width:10px;height:10px;border:none;border-radius:50%;background:var(--muted);}
+  .nl-foot{text-align:center;color:var(--muted);font-size:12.5px;margin-top:36px;padding-top:18px;border-top:1px solid var(--line);}
+  @media(max-width:560px){
+    .nl-row{grid-template-columns:1fr;gap:3px;}
+    .nl-t{padding-top:0;}
+    .nl-hero{padding:28px 20px 24px;}
+  }
+</style>
+
+<div class="nl-wrap">
+
+  <div class="nl-hero">
+    <p class="nl-kicker">Privé · familie &amp; vrienden</p>
+    <h1>Waar ik ongeveer ben<br>Albanese Alpen · 21–27 september 2026</h1>
+    <p>Een simpel overzicht van mijn reis. Tijden zijn lokaal. In de bergen is bijna geen bereik, dus als je niks van me hoort, komt dat daardoor — niet omdat er iets mis is.</p>
+    <p class="nl-updated">Laatst bijgewerkt: <span id="nl-updated">…</span> · Vandaag: <span id="nl-today">…</span></p>
+
+    <div class="nl-status">
+      <div class="nl-stat"><div class="lbl">Nu</div><div class="val">Noord-Albanië</div></div>
+      <div class="nl-stat"><div class="lbl">Vannacht</div><div class="val">Vermosh</div></div>
+      <div class="nl-stat"><div class="lbl">Waarschijnlijk offline</div><div class="val">22–25 sept</div></div>
+      <div class="nl-stat"><div class="lbl">Thuis</div><div class="val">zo 27, 11:35</div></div>
+    </div>
+  </div>
+
+  <!-- DAG TOT DAG -->
+  <div class="nl-sec">
+    <h2>Dag tot dag</h2>
+    <p class="note">Tik op een dag om hem open te klappen. "Offline"-dagen zijn dagen waarop ik vrijwel zeker geen bereik heb.</p>
+
+    <details class="nl-day" open>
+      <summary><span class="nl-dnum"><small>SEP</small><span>21</span></span>
+        <span class="nl-dtitle">Aankomen en doorrijden naar Theth<span class="nl-dsub">Schiphol → Wenen → Tirana → de bergen in</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">07:00</div><div class="nl-c"><b>Vertrek vanaf Schiphol</b> — vlucht OS320, via Wenen.</div></div>
+        <div class="nl-row"><div class="nl-t">11:20</div><div class="nl-c"><b>Landing in Tirana</b> (vlucht OS751), huurauto ophalen.</div></div>
+        <div class="nl-row"><div class="nl-t">Middag</div><div class="nl-c">Naar het noorden rijden. Eén stop in <b>Koplik</b> voor brandstof en boodschappen, dan over de bergpas de vallei in.</div></div>
+        <div class="nl-row"><div class="nl-t">Avond</div><div class="nl-c">Aankomst in <b>Theth</b>. Eerste nacht in het guesthouse — ontbijt en diner inbegrepen.<span class="nl-badge b-signal">Bereik wordt minder</span></div></div>
+        <div class="nl-note">Ik stuur een berichtje als ik in Theth aankom, waarschijnlijk aan het begin van de avond. Daarna: uitgaan van wisselend bereik.</div>
+      </div>
+    </details>
+
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>22</span></span>
+        <span class="nl-dtitle">Theth — eerste volle dag<span class="nl-dsub">Rustige wandeling, waterval, dorp</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">Dag</div><div class="nl-c">Korte wandeling naar de <b>Grunas-waterval</b>, daarna het dorp: de oude stenen toren, de kerk in de weide. Lezen aan de rivier.</div></div>
+        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Diner in het guesthouse. Vroeg naar bed.</div></div>
+        <div class="nl-offline-note">Vrijwel zeker <b>geen bruikbaar telefoonbereik</b> vandaag. Helemaal verwacht.</div>
+      </div>
+    </details>
+
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>23</span></span>
+        <span class="nl-dtitle">Theth — de grote wandeling<span class="nl-dsub">De hele dag in de vallei</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">Dag</div><div class="nl-c">Wandeldag — het <b>Blauwe Oog</b> stroomopwaarts in de vallei, of een rustigere wandeling over de valleibodem. Van 's ochtends tot laat in de middag onderweg.</div></div>
+        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Terug in het guesthouse, diner, alvast wat inpakken voor de rit.</div></div>
+        <div class="nl-offline-note">Het grootste deel van de dag weg van het dorp — <b>reken niet op antwoord</b> voor de avond.</div>
+      </div>
+    </details>
+
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>24</span></span>
+        <span class="nl-dtitle">Rijden naar Vermosh<span class="nl-dsub">Lange rijdag, tweede vallei</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">Ochtend</div><div class="nl-c">Inpakken en terug over de bergpas. Tanken en boodschappen doen in <b>Koplik</b>.</div></div>
+        <div class="nl-row"><div class="nl-t">Middag</div><div class="nl-c">Noordwaarts door de <b>Cem-vallei</b> — spectaculaire klifweg bij Leqet e Hotit, langs Tamarë, Selcë en Lëpushë — helemaal door naar <b>Vermosh</b>, het noordelijkste dorp van Albanië.</div></div>
+        <div class="nl-row"><div class="nl-t">Avond</div><div class="nl-c">Aankomst en intrekken in het tweede guesthouse, in het dal op ~1.000 m.<span class="nl-badge b-signal">Misschien bereik</span></div></div>
+        <div class="nl-note">Dit is de dag dat ik <b>uren in de auto zit</b>. De beste kans op een bericht is 's avonds.</div>
+      </div>
+    </details>
+
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>25</span></span>
+        <span class="nl-dtitle">Vermosh — een rustige dag<span class="nl-dsub">Waterval, kloof, bergen, verder niet veel</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">Dag</div><div class="nl-c">Wandelen vanaf de deur: de <b>Gjanve-waterval</b> en de <b>Bashkimi-kloof</b> (Kanioni i Bashkimit) liggen op loopafstand van het dorp — een makkelijke route van zo'n 10 km heen en terug. Of, als het weer goed is, een top boven het dal. Anders: lezen, weide, helemaal niks.</div></div>
+        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Diner in het guesthouse. Sterren.</div></div>
+        <div class="nl-offline-note">Net als in Theth — <b>heel beperkt bereik</b>. Geen antwoord betekent niet dat er iets aan de hand is.</div>
+      </div>
+    </details>
+
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>26</span></span>
+        <span class="nl-dtitle">Naar de hoofdstad<span class="nl-dsub">Terug naar Tirana, laatste nacht bij het vliegveld</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">Ochtend</div><div class="nl-c">Uitchecken en naar het zuiden rijden naar <b>Tirana</b> (~4–4,5 uur).</div></div>
+        <div class="nl-row"><div class="nl-t">Middag</div><div class="nl-c">Rondlopen in het centrum: het grote plein, het bunkermuseum, de markt. Laatste diner buiten de deur.</div></div>
+        <div class="nl-row"><div class="nl-t">Nacht</div><div class="nl-c">Slapen bij het <b>vliegveld</b> vanwege de vroege vlucht.<span class="nl-badge b-signal">Bereik terug</span></div></div>
+        <div class="nl-note">Ik ben er <b>'s middags</b> — tussen ongeveer <b>14:00 en 17:00</b> heb ik rustig de tijd om te bellen of te appen. Daarna eet ik en ga ik vroeg naar bed, want ik moet de volgende ochtend om 03:30 op.</div>
+      </div>
+    </details>
+
+    <details class="nl-day">
+      <summary><span class="nl-dnum"><small>SEP</small><span>27</span></span>
+        <span class="nl-dtitle">Naar huis vliegen<span class="nl-dsub">Tirana → Wenen → Amsterdam</span></span></summary>
+      <div class="nl-body">
+        <div class="nl-row"><div class="nl-t">06:00</div><div class="nl-c"><b>Vertrek uit Tirana</b> — vlucht OS760 naar Wenen.</div></div>
+        <div class="nl-row"><div class="nl-t">09:40</div><div class="nl-c">Wenen → Amsterdam, vlucht OS313.</div></div>
+        <div class="nl-row"><div class="nl-t">11:35</div><div class="nl-c"><b>Landing op Schiphol.</b> Thuis.<span class="nl-badge b-travel">Niet vroeg bellen</span></div></div>
+        <div class="nl-note">Door de vlucht van 06:00 sta ik rond 03:30 op — ik ben onbereikbaar tot ik land. Volg de vluchten hieronder.</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- VLUCHTEN -->
+  <div class="nl-sec">
+    <h2>Volg de vluchten live</h2>
+    <p class="note">Wil je precies weten waar het vliegtuig is — vertraging, positie, aankomsttijd — tik dan op "Volgen".</p>
+    <div class="nl-card">
+      <div class="nl-flight">
+        <div class="nl-fnum">OS320</div>
+        <div class="nl-froute">Amsterdam → Wenen<br><span>ma 21 · 07:00 → 08:50</span></div>
+        <a class="nl-btn" href="https://www.flightradar24.com/data/flights/os320" target="_blank" rel="noopener">Volgen</a>
+      </div>
+      <div class="nl-flight">
+        <div class="nl-fnum">OS751</div>
+        <div class="nl-froute">Wenen → Tirana<br><span>ma 21 · 09:50 → 11:20</span></div>
+        <a class="nl-btn" href="https://www.flightradar24.com/data/flights/os751" target="_blank" rel="noopener">Volgen</a>
+      </div>
+      <div class="nl-flight">
+        <div class="nl-fnum">OS760</div>
+        <div class="nl-froute">Tirana → Wenen<br><span>zo 27 · 06:00 → 07:35</span></div>
+        <a class="nl-btn" href="https://www.flightradar24.com/flight/os760" target="_blank" rel="noopener">Volgen</a>
+      </div>
+      <div class="nl-flight">
+        <div class="nl-fnum">OS313</div>
+        <div class="nl-froute">Wenen → Amsterdam<br><span>zo 27 · 09:40 → 11:35</span></div>
+        <a class="nl-btn" href="https://www.flightradar24.com/data/flights/os313" target="_blank" rel="noopener">Volgen</a>
+      </div>
+      <div class="nl-note">Deze worden live bijgewerkt. Op de terugweg is OS760 de belangrijkste — zodra die in Wenen landt, zit ik op het laatste stuk.</div>
+    </div>
+  </div>
+
+  <!-- KAART -->
+  <div class="nl-sec">
+    <h2>De route</h2>
+    <p class="note">Alle stops en de hele route in één beeld. Dit werkt ook zonder internet — het is een tekening, geen live-kaart.</p>
+    <div class="nl-card">
+
+      <!-- Geografisch kloppende routetekening: echte coördinaten, geprojecteerd met
+           lengtegraad × cos(42,1°) ≈ 0,7416. Inline SVG — geen externe bestanden. -->
+      <svg class="nl-route" viewBox="0 0 360 620" role="img" aria-labelledby="routetitel routedesc" xmlns="http://www.w3.org/2000/svg">
+        <title id="routetitel">Routekaart van de reis door Noord-Albanië</title>
+        <desc id="routedesc">Route van het vliegveld van Tirana via Shkodër en Koplik naar Theth, terug via Koplik en over de bergpas Leqet e Hotit naar Vermosh, en vandaar terug naar Tirana.</desc>
+
+        <rect fill="#eee9dd" x="0" y="0" width="360" height="620" rx="12"/>
+
+        <!-- Heenreis: TIA -> Shkodër -> Koplik -> Theth -->
+        <path fill="none" stroke="#4a8db5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+              d="M 233,568 L 150,432 L 88,362 L 234,330"/>
+        <!-- Terug: Theth -> Koplik (zelfde weg terug) -->
+        <path fill="none" stroke="#9db8cc" stroke-width="2.4" stroke-dasharray="7 5" stroke-linecap="round"
+              d="M 234,330 L 88,362"/>
+        <!-- Koplik -> Leqet e Hotit -> Vermosh -->
+        <path fill="none" stroke="#4a8db5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+              d="M 88,362 L 124,244 L 190,140"/>
+        <!-- Vermosh -> terug naar Tirana -->
+        <path fill="none" stroke="#4a8db5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+              d="M 190,140 L 124,244 L 88,362 L 150,432 L 233,568"/>
+
+        <!-- 1 · Vliegveld Tirana -->
+        <circle fill="#2f5d50" stroke="#fff" stroke-width="2.5" cx="233" cy="568" r="11"/>
+        <text fill="#fff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="233" y="572">1</text>
+        <text fill="#1d2733" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="12.5" font-weight="600" x="248" y="560">Vliegveld Tirana (TIA)</text>
+        <text fill="#6b7a8c" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="10.5" font-weight="500" x="248" y="574">start &amp; einde · 21 &amp; 27 sept</text>
+
+        <!-- 2 · Shkodër -->
+        <circle fill="#6b7a8c" stroke="#fff" stroke-width="2" cx="150" cy="432" r="7"/>
+        <text fill="#1d2733" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="12.5" font-weight="600" x="163" y="429">Shkodër</text>
+        <text fill="#6b7a8c" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="10.5" font-weight="500" x="163" y="442">alleen doorrijden</text>
+
+        <!-- 3 · Koplik -->
+        <circle fill="#2f5d50" stroke="#fff" stroke-width="2.5" cx="88" cy="362" r="11"/>
+        <text fill="#fff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="88" y="366">3</text>
+        <text fill="#1d2733" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="12.5" font-weight="600" x="14" y="390">Koplik (tankstop)</text>
+        <text fill="#6b7a8c" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="10.5" font-weight="500" x="14" y="403">brandstof + contant · 2×</text>
+
+        <!-- 4 · Leqet e Hotit -->
+        <circle fill="#6b7a8c" stroke="#fff" stroke-width="2" cx="124" cy="244" r="7"/>
+        <text fill="#1d2733" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="12.5" font-weight="600" x="137" y="241">Leqet e Hotit (bergpas)</text>
+        <text fill="#6b7a8c" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="10.5" font-weight="500" x="137" y="254">klimweg met haarspelden</text>
+
+        <!-- 5 · Theth -->
+        <circle fill="#2f5d50" stroke="#fff" stroke-width="2.5" cx="234" cy="330" r="11"/>
+        <text fill="#fff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="234" y="334">5</text>
+        <text fill="#1d2733" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="12.5" font-weight="600" x="249" y="330">Theth-vallei</text>
+        <text fill="#6b7a8c" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="10.5" font-weight="500" x="249" y="343">2 nachten · 21–24 sept</text>
+
+        <!-- 6 · Vermosh -->
+        <circle fill="#7a4b6b" stroke="#fff" stroke-width="2.5" cx="190" cy="140" r="11"/>
+        <text fill="#fff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="190" y="144">6</text>
+        <text fill="#1d2733" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="12.5" font-weight="600" x="205" y="140">Vermosh</text>
+        <text fill="#6b7a8c" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="10.5" font-weight="500" x="205" y="153">3 nachten · 24–26 sept</text>
+
+        <!-- Kompas -->
+        <g transform="translate(322,52)">
+          <path fill="none" stroke="#8a969f" stroke-width="1.5" d="M 0,26 L 0,0 M -7,8 L 0,0 L 7,8"/>
+          <text fill="#6b7a8c" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="0" y="42">N</text>
+        </g>
+      </svg>
+
+      <div class="nl-legend">
+        <span class="nl-leg"><i class="sw"></i> heenreis en verder</span>
+        <span class="nl-leg"><i class="sw dashed"></i> dezelfde weg terug</span>
+        <span class="nl-leg"><i class="sw dot"></i> overnachting</span>
+        <span class="nl-leg"><i class="sw dotsmall"></i> tussenstop</span>
+      </div>
+
+      <div class="nl-note">De rit tussen de twee valleien gaat <b>terug via Koplik</b> en dan noordwaarts over de bergpas — er is geen weg recht over de bergen. Ik kom dus twee keer door Koplik.</div>
+    </div>
+  </div>
+
+  <!-- ONLINE KAART -->
+  <div class="nl-sec">
+    <h2>Echte kaart (alleen online)</h2>
+    <p class="note">De tekening hierboven werkt altijd. Deze heeft internet nodig om te laden.</p>
+    <div class="nl-card">
+      <iframe class="nl-map" loading="lazy" title="Online overzichtskaart van de reis"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=19.30%2C41.30%2C20.00%2C42.70&amp;layer=mapnik&amp;marker=42.5928%2C19.6806"></iframe>
+      <div class="nl-pins">
+        <div class="nl-pin"><b>⑤ Theth-vallei</b><span>21–24 sept · eerste twee nachten</span><span>42.4150 N, 19.7570 O</span><a href="https://www.openstreetmap.org/?mlat=42.4150&amp;mlon=19.7570#map=12/42.4150/19.7570" target="_blank" rel="noopener">Kaart openen →</a></div>
+        <div class="nl-pin"><b>⑥ Vermosh</b><span>24–26 sept · drie nachten</span><span>42.5928 N, 19.6806 O</span><a href="https://www.openstreetmap.org/?mlat=42.5928&amp;mlon=19.6806#map=12/42.5928/19.6806" target="_blank" rel="noopener">Kaart openen →</a></div>
+        <div class="nl-pin"><b>① Vliegveld Tirana</b><span>26–27 sept · laatste nacht in de buurt</span><span>41.4147 N, 19.7206 O</span><a href="https://www.openstreetmap.org/?mlat=41.4147&amp;mlon=19.7206#map=12/41.4147/19.7206" target="_blank" rel="noopener">Kaart openen →</a></div>
+        <div class="nl-pin"><b>③ Koplik (tankstop)</b><span>2× onderweg</span><span>42.20982 N, 19.43865 O</span><a href="https://www.openstreetmap.org/?mlat=42.20982&amp;mlon=19.43865#map=12/42.20982/19.43865" target="_blank" rel="noopener">Kaart openen →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="nl-sec">
+    <h2>Als je me echt moet bereiken</h2>
+    <p class="note">Niet voor "hoe gaat het" — voor echte urgentie. Ik reageer traag op al het andere, en vaak kan ik helemaal niet reageren.</p>
+    <div class="nl-card">
+      <div class="nl-contact">
+        <div class="nl-cname">Mijn mobiel<span class="nl-em">Roaming · reken er in de valleien niet op</span></div>
+        <div class="nl-cnum"><a href="tel:+31600000000">+31 6 ·· ·· ·· ··</a></div>
+      </div>
+      <div class="nl-contact">
+        <div class="nl-cname">Huurauto — noodlijn<span class="nl-em">Sunny Cars, 24/7, Nederlandstalig</span></div>
+        <div class="nl-cnum"><a href="tel:+31235699690">+31 23 569 9690</a></div>
+      </div>
+      <div class="nl-contact">
+        <div class="nl-cname">Enterprise Albanië (lokale balie)<span class="nl-em">Vliegveld Tirana</span></div>
+        <div class="nl-cnum"><a href="tel:+355676000900">+355 67 600 0900</a></div>
+      </div>
+      <div class="nl-contact">
+        <div class="nl-cname">FBTO Alarmcentrale (Eurocross)<span class="nl-em">Reis- en zorgverzekering</span></div>
+        <div class="nl-cnum"><a href="tel:+31582345650">+31 (0)58 234 56 50</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nl-foot">
+    Privépagina · reis Albanië 21–27 september 2026<br>
+    Deze pagina wordt niet geïndexeerd door zoekmachines.
+  </div>
+
+</div>
+
+<script>
+/* ============================================================
+   INSTELLINGEN — pas alleen dit blok aan
+   ------------------------------------------------------------
+   Zet hieronder de datum waarop je deze pagina voor het laatst
+   hebt bijgewerkt. De "vandaag"-datum wordt automatisch berekend
+   op het moment dat iemand de pagina opent.
+   ============================================================ */
+var LAATST_BIJGEWERKT = '2026-09-21'; // <-- pas dit aan (JJJJ-MM-DD)
+
+(function(){
+  var MAANDEN = ['januari','februari','maart','april','mei','juni',
+                 'juli','augustus','september','oktober','november','december'];
+
+  function nlDatum(d, metTijd){
+    var s = d.getDate() + ' ' + MAANDEN[d.getMonth()] + ' ' + d.getFullYear();
+    if(metTijd){
+      var u = ('0' + d.getHours()).slice(-2);
+      var m = ('0' + d.getMinutes()).slice(-2);
+      s += ', ' + u + ':' + m;
+    }
+    return s;
+  }
+
+  /* "Laatst bijgewerkt" — vaste datum, in één regel hierboven aan te passen */
+  var elUpd = document.getElementById('nl-updated');
+  if(elUpd){
+    var parts = LAATST_BIJGEWERKT.split('-');
+    var upd = new Date(+parts[0], parts[1]-1, +parts[2]);
+    elUpd.textContent = nlDatum(upd, false);
+  }
+
+  /* "Vandaag" — automatisch de datum van de bezoeker, met lokale tijd */
+  var elToday = document.getElementById('nl-today');
+  if(elToday){
+    elToday.textContent = nlDatum(new Date(), true) + ' (lokaal)';
+  }
+})();
+</script>
+</body>
+</html>  .nl-btn{display:inline-block;text-decoration:none;background:var(--sky);color:#fff !important;padding:7px 13px;border-radius:8px;font-size:12.5px;font-weight:600;}
+  .nl-btn:hover{background:#3c7ea3;}
   .nl-foot{text-align:center;color:var(--muted);font-size:12.5px;margin-top:36px;padding-top:18px;border-top:1px solid var(--line);}
   @media(max-width:560px){
     .nl-row{grid-template-columns:1fr;gap:3px;}
